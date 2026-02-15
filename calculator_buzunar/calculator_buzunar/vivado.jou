@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Jun  3 10:08:23 2025
+# Process ID         : 19944
+# Current directory  : C:/Users/Nastenka/Desktop/calculator complet/project_1/project_1
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent21296 C:\Users\Nastenka\Desktop\calculator complet\project_1\project_1\project_1.xpr
+# Log file           : C:/Users/Nastenka/Desktop/calculator complet/project_1/project_1/vivado.log
+# Journal file       : C:/Users/Nastenka/Desktop/calculator complet/project_1/project_1\vivado.jou
+# Running On         : DESKTOP-9J8NLNN
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 7735HS with Radeon Graphics        
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 14286 MB
+# Swap memory        : 6174 MB
+# Total Virtual      : 20460 MB
+# Available Virtual  : 8963 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Nastenka/Desktop/calculator complet/project_1/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Nastenka/Desktop/calculator complet/project_1/project_1/project_1.runs/impl_1/calculator_buzunar.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Nastenka/Desktop/calculator complet/project_1/project_1/project_1.runs/impl_1/calculator_buzunar.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
